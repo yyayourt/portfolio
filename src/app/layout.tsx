@@ -1,12 +1,9 @@
-'use client';
-
 import { Inter } from 'next/font/google';
-import { ThemeProvider } from 'next-themes';
 import { Metadata } from 'next';
-
 import './globals.css';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
+import { Providers } from '@/lib/providers'; // Importer le composant Providers
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -60,11 +57,11 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body className={`${inter.className} bg-gray text-gray-600 antialiased`}>
-        <ThemeProvider attribute="class">
+        <Providers>  {/* Utilisation du composant Providers */}
           <Header />
           <main className="flex min-h-screen w-full flex-col">{children}</main>
           <Footer />
-        </ThemeProvider>
+        </Providers>
       </body>
     </html>
   );
