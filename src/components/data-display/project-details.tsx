@@ -35,6 +35,8 @@ const ProjectDetails = ({
           <Image
             src={previewImage}
             alt={`${name} preview`}
+            width={600}
+            height={400}
             className="rounded-xl shadow-lg transition-transform duration-500 md:hover:scale-105"
             style={{ objectFit: 'cover' }}
           />

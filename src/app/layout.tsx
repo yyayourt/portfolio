@@ -1,18 +1,19 @@
-import Script from 'next/script';
+'use client';
+
 import { Inter } from 'next/font/google';
+import { ThemeProvider } from 'next-themes';
 import { Metadata } from 'next';
 
 import './globals.css';
 import Header from '@/components/layout/header';
-import { Providers } from '@/lib/providers';
 import Footer from '@/components/layout/footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
-const title = 'Sagar Shah | Full Stack Developer From Ahmedabad, India.';
+const title = 'Yanis Nasri | Web Developer From Nimes, France.';
 const description =
-  'A self-proclaimed designer who specializes in full stack development (React.js & Node.js), from Ahmedabad, India.';
-const url = 'https://sagarshah.dev';
+  'Un développeur spécialisé dans le développement web (React.js et Node.js), originaire de Nîmes, France.';
+const url = 'https://yanisnasri.dev';
 
 export const metadata: Metadata = {
   metadataBase: new URL(url),
@@ -20,11 +21,10 @@ export const metadata: Metadata = {
   description,
   keywords: [
     'Frontend Developer',
-    'Full Stack Developer',
     'React Developer',
     'Next.js Developer',
   ],
-  creator: 'Sagar Shah',
+  creator: 'Yanis Nasri',
   themeColor: [
     { media: '(prefers-color-scheme: light)', color: 'white' },
     { media: '(prefers-color-scheme: dark)', color: 'black' },
@@ -37,16 +37,9 @@ export const metadata: Metadata = {
     siteName: title,
     images: [
       {
-        url: '/images/open-graph-sagar.png',
+        url: '/images/yanisBanner.png',
       },
     ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title,
-    description,
-    creator: '@shahsagarm',
-    images: '/images/open-graph-sagar.png',
   },
   icons: {
     icon: '/favicon.ico',
@@ -55,8 +48,6 @@ export const metadata: Metadata = {
   },
 };
 
-const googleAnalyticsId = process.env.GOOGLE_ANALYTICS_ID;
-
 export default function RootLayout({
   children,
 }: {
@@ -64,30 +55,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="!scroll-smooth" suppressHydrationWarning>
-      {googleAnalyticsId ? (
-        <head>
-          <Script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`}
-          ></Script>
-          <Script id="google-anayltics-script">
-            {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-          
-            gtag('config', '${googleAnalyticsId}');
-          `}
-          </Script>
-        </head>
-      ) : null}
+      <head>
+        <title>{title}</title>
+        <link rel="icon" href="/favicon.ico" />
+      </head>
       <body className={`${inter.className} bg-gray text-gray-600 antialiased`}>
-        <Providers>
+        <ThemeProvider attribute="class">
           <Header />
           <main className="flex min-h-screen w-full flex-col">{children}</main>
           <Footer />
-        </Providers>
+        </ThemeProvider>
       </body>
     </html>
   );
 }
+
+

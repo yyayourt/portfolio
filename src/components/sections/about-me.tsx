@@ -1,17 +1,17 @@
 import Image from 'next/image';
 
-import SagarFullPose from '/public/images/sagar-full-pose.jpg';
+import SagarFullPose from '/public/images/107676.png';
 import Tag from '@/components/data-display/tag';
 import Container from '@/components/layout/container';
 import Typography from '@/components/general/typography';
-import Link from '@/components/navigation/link';
-import { EXTERNAL_LINKS } from '@/lib/data';
+//import Link from '@/components/navigation/link';
+//import { EXTERNAL_LINKS } from '@/lib/data';
 
 const AboutMeSection = () => {
   return (
     <Container className="bg-gray-50" id="about">
       <div className="self-center">
-        <Tag label="About me" />
+        <Tag label="À propos de moi" />
       </div>
 
       <div className="flex w-full flex-col justify-between gap-12 md:flex-row">
@@ -31,35 +31,30 @@ const AboutMeSection = () => {
         {/* Content */}
         <div className="flex max-w-xl flex-col gap-6">
           <Typography variant="h3">
-            Curious about me? Here you have it:
+          Curieux à mon sujet ? Voici ce que vous devez savoir :
           </Typography>
           <Typography>
-            I&apos;m a passionate,{' '}
-            <Link
+            {/* <Link
               noCustomization
               externalLink
               withUnderline
               href={EXTERNAL_LINKS.FIGMA}
             >
               self-proclaimed designer
-            </Link>{' '}
-            who specializes in full stack development (React.js & Node.js). I am
-            enthusiastic about bringing the technical and visual aspects of
-            digital products to life. User experience, pixel perfect design, and
-            writing clear, readable, highly performant code matters to me.
+            </Link>{' '}*/}
+            Je suis un développeur passionné, spécialisé dans le développement front-end,
+            en particulier avec React.js. J&apos;aime donner vie aux aspects techniques et 
+            visuels des produits numériques. L&apos;expérience utilisateur, le design au pixel 
+            près et l&apos;écriture de code clair, lisible et performant sont essentiels pour moi.
           </Typography>
           <Typography>
-            I began my journey as a web developer in 2015, and since then,
-            I&apos;ve continued to grow and evolve as a developer, taking on new
-            challenges and learning the latest technologies along the way. Now,
-            in my early thirties, 7 years after starting my web development
-            journey, I&apos;m building cutting-edge web applications using
-            modern technologies such as Next.js, TypeScript, Nestjs,
-            Tailwindcss, Supabase and much more.
+          J&apos;ai commencé ma formation de développeur web en septembre 2023 sur OpenClassrooms. 
+          Depuis, je m&apos;efforce d&apos;acquérir de nouvelles compétences et de me perfectionner 
+          dans le domaine du développement web, avec un focus particulier sur les technologies front-end.
           </Typography>
-          <Typography>
-            I am very much a progressive thinker and enjoy working on products
-            end to end, from ideation all the way to development.
+          {/*<Typography>
+          Je suis un penseur progressiste et j&apos;aime travailler sur les produits de 
+          bout en bout, de l&apos;idéation au développement.
           </Typography>
           <Typography>
             When I&apos;m not in full-on developer mode, you can find me
@@ -85,23 +80,23 @@ const AboutMeSection = () => {
               GitHub
             </Link>
             .
-          </Typography>
-          <Typography>Finally, some quick bits about me.</Typography>
+          </Typography>*/}
+          <Typography>Enfin, quelques infos rapides sur moi :</Typography>
           <div className="flex flex-col gap-2 md:flex-row md:gap-6">
             <ul className="flex list-inside list-disc flex-col gap-2">
               <Typography component="li">
-                B.E. in Computer Engineering
+                Formation en développement web sur OpenClassrooms
               </Typography>
-              <Typography component="li">Full time freelancer</Typography>
+              <Typography component="li">Axé principalement sur le front-end avec React.js</Typography>
             </ul>
             <ul className="flex list-inside list-disc flex-col gap-2">
-              <Typography component="li">Avid learner</Typography>
-              <Typography component="li">Aspiring indie hacker</Typography>
+              <Typography component="li">Apprenant avide, toujours à la recherche de nouvelles connaissances</Typography>
             </ul>
           </div>
           <Typography>
-            One last thing, I&apos;m available for freelance work, so feel free
-            to reach out and say hello! I promise I don&apos;t bite 😉
+            Bien que je ne sois pas encore en freelance, je suis ouvert à toute 
+            opportunité de collaboration. N&apos;hésitez pas à me contacter, 
+            je serais ravi d&apos;échanger avec vous !
           </Typography>
         </div>
       </div>

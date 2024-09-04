@@ -18,6 +18,17 @@ const ExperienceDetails = ({
   endDate,
   summary,
 }: ExperienceDetailsProps) => {
+  // Vérifier si startDate est une instance valide de Date
+  const formattedStartDate =
+    startDate instanceof Date && !isNaN(startDate.getTime())
+      ? new Intl.DateTimeFormat('en-US', dateFormatOptions).format(startDate)
+      : 'Invalid date';
+
+  const formattedEndDate =
+    endDate instanceof Date && !isNaN(endDate.getTime())
+      ? new Intl.DateTimeFormat('en-US', dateFormatOptions).format(endDate)
+      : 'NA';
+
   return (
     <Card className="mx-auto flex w-full max-w-4xl flex-col justify-between gap-4 p-8 md:flex-row md:gap-8">
       <div className="max-md:order-1 md:w-1/4">
@@ -25,6 +36,8 @@ const ExperienceDetails = ({
           src={logo}
           srcForDarkMode={darkModeLogo}
           alt={logoAlt}
+          width={600}
+          height={400}
           className="max-w-[120px]"
         />
       </div>
@@ -42,17 +55,8 @@ const ExperienceDetails = ({
       </div>
       <div className="max-md:order-2 md:w-1/4">
         <Typography className="text-gray-700 md:text-right">
-          {new Intl.DateTimeFormat('en-US', dateFormatOptions).format(
-            startDate
-          )}{' '}
-          -{' '}
-          {currentlyWorkHere
-            ? 'Present'
-            : endDate
-            ? new Intl.DateTimeFormat('en-US', dateFormatOptions).format(
-                endDate
-              )
-            : 'NA'}
+          {formattedStartDate} -{' '}
+          {currentlyWorkHere ? 'Present' : formattedEndDate}
         </Typography>
       </div>
     </Card>
@@ -60,3 +64,4 @@ const ExperienceDetails = ({
 };
 
 export default ExperienceDetails;
+

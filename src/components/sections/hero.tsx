@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { MapPin } from 'lucide-react';
 
-import SagarHeadshot from '/public/images/sagar-headshot.jpg';
+import YanisHeadshot from '/public/images/yanis-headshot.png';
 import SocialIcons from '@/components/data-display/social-icons';
 import Typography from '@/components/general/typography';
 import Container from '@/components/layout/container';
@@ -14,7 +14,7 @@ const HeroSection = () => {
         <div className="flex items-center justify-center md:order-last md:flex-grow md:justify-end">
           <div className="relative h-[300px] w-[280px] md:h-[360px] md:w-[320px]">
             <Image
-              src={SagarHeadshot}
+              src={YanisHeadshot}
               alt="Headshot of Sagar"
               className="absolute z-10 h-[280px] w-[240px] border-8 border-gray max-md:left-5 md:left-0 md:top-0 md:h-[320px] md:w-[280px]"
               style={{ objectFit: 'cover' }}
@@ -27,21 +27,21 @@ const HeroSection = () => {
         <div className="flex max-w-3xl flex-grow flex-col justify-center gap-8 md:order-first md:items-start md:justify-center 2xl:gap-12">
           <div className="flex flex-col gap-2">
             <Typography variant="h1">
-              Hi, I&apos;m Sagar{' '}
+              Salut, moi c&apos;est Yanis{' '}
               <span className="inline-block animate-waving-hand">👋</span>
             </Typography>
             <Typography>
-              I&apos;m a full stack developer (React.js & Node.js) with a focus
-              on creating (and occasionally designing) exceptional digital
-              experiences that are fast, accessible, visually appealing, and
-              responsive. Even though I have been creating web applications for
-              over 7 years, I still love it as if it was something new.
+            Je suis développeur web front-end, diplômé d&apos;une formation intensive d&apos;un an. 
+            Passionné par la création d&apos;expériences numériques modernes, je me concentre 
+            sur des interfaces rapides, accessibles et esthétiques. Débutant dans ma carrière, 
+            je suis enthousiaste à l&apos;idée de mettre en pratique mes compétences et de continuer 
+            à apprendre dans ce domaine.
             </Typography>
           </div>
           <div className="flex flex-col gap-2">
             <div className="flex gap-2">
               <MapPin className="stroke-gray-600" />
-              <Typography>Ahmedabad, India</Typography>
+              <Typography>Nimes, France</Typography>
             </div>
 
             <div className="flex items-center gap-2">
@@ -51,7 +51,7 @@ const HeroSection = () => {
                   <span className="relative inline-flex h-3 w-3 rounded-full bg-emerald-500"></span>
                 </span>
               </div>
-              <Typography>Available for new projects</Typography>
+              <Typography>Disponible pour de nouveaux projets</Typography>
             </div>
           </div>
           <SocialIcons />
