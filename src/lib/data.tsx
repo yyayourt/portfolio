@@ -38,37 +38,44 @@ export const SOCIAL_LINKS = [
   },
 ];
 
-export async function fetchTechnologies(): Promise<TechDetails[]> {
-  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/technologies`);
+// Fichier: src/lib/data.tsx
+
+// Appel pour récupérer les technologies
+export async function fetchTechnologies() {
+  const response = await fetch('/api/technologies');
   if (!response.ok) {
     throw new Error('Failed to fetch technologies');
   }
   return await response.json();
 }
 
-export async function fetchExperiences(): Promise<ExperienceDetails[]> {
-  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/experiences`);
+// Appel pour récupérer les expériences
+export async function fetchExperiences() {
+  const response = await fetch('/api/experiences');
   if (!response.ok) {
     throw new Error('Failed to fetch experiences');
   }
   return await response.json();
 }
 
-export async function fetchProjects(): Promise<ProjectDetails[]> {
-  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/projects`);
+// Appel pour récupérer les projets
+export async function fetchProjects() {
+  const response = await fetch('/api/projects');
   if (!response.ok) {
     throw new Error('Failed to fetch projects');
   }
   return await response.json();
 }
 
-export async function fetchSchools(): Promise<SchoolDetails[]> {
-  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/schools`);
+// Appel pour récupérer les écoles
+export async function fetchSchools() {
+  const response = await fetch('/api/schools');
   if (!response.ok) {
     throw new Error('Failed to fetch schools');
   }
-  const data = await response.json();
   
+  const data = await response.json();
+
   // Assurez-vous que les dates sont bien des objets Date
   return data.map((school: any) => ({
     ...school,

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import YaniFullPose from '/public/images/yanisBanner.png';
+import YaniFullPose from '/public/images/profilYanis.jpg';
 import Tag from '@/components/data-display/tag';
 import Container from '@/components/layout/container';
 import Typography from '@/components/general/typography';
