@@ -1,14 +1,23 @@
+// pages/api/experiences.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
+import mongoose from 'mongoose';
+import Experience from '../models/experienceModel';
 
-// Route API pour récupérer les expériences du back-end
+// Fonction pour se connecter à MongoDB
+async function connectToDatabase() {
+  if (mongoose.connection.readyState === 0) {
+    await mongoose.connect(process.env.MONGO_URI!);
+  }
+}
+
+// Route API pour récupérer les expériences
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const backendUrl = 'http://localhost:5000/api/experiences'; // URL de votre back-end
+  await connectToDatabase();
 
   if (req.method === 'GET') {
     try {
-      const response = await fetch(backendUrl);
-      const data = await response.json();
-      res.status(200).json(data); // Retourne les données au front-end
+      const experiences = await Experience.find({});
+      res.status(200).json(experiences);
     } catch (error) {
       res.status(500).json({ message: 'Failed to fetch experiences' });
     }

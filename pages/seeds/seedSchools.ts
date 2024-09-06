@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
-import School from './models/schoolModel';
+import School from '../../pages/models/schoolModel';
 
 dotenv.config();
 

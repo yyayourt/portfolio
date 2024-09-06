@@ -1,14 +1,23 @@
+// pages/api/schools.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
+import mongoose from 'mongoose';
+import School from '../models/schoolModel';
 
-// Route API pour récupérer les écoles du back-end
+// Fonction pour se connecter à MongoDB
+async function connectToDatabase() {
+  if (mongoose.connection.readyState === 0) {
+    await mongoose.connect(process.env.MONGO_URI!);
+  }
+}
+
+// Route API pour récupérer les écoles
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const backendUrl = 'http://localhost:5000/api/schools'; // URL du back-end
+  await connectToDatabase();
 
   if (req.method === 'GET') {
     try {
-      const response = await fetch(backendUrl);
-      const data = await response.json();
-      res.status(200).json(data);
+      const schools = await School.find({});
+      res.status(200).json(schools);
     } catch (error) {
       res.status(500).json({ message: 'Failed to fetch schools' });
     }
