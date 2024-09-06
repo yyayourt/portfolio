@@ -1,7 +1,7 @@
 // pages/api/projects.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 import mongoose from 'mongoose';
-import Project from '../models/projectModel';
+import Project from '../../models/projectModel';
 
 // Fonction pour se connecter à MongoDB
 async function connectToDatabase() {

@@ -1,7 +1,7 @@
 // pages/api/schools.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 import mongoose from 'mongoose';
-import School from '../models/schoolModel';
+import School from '../../models/schoolModel';
 
 // Fonction pour se connecter à MongoDB
 async function connectToDatabase() {

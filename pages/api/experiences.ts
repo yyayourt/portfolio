@@ -1,7 +1,7 @@
 // pages/api/experiences.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 import mongoose from 'mongoose';
-import Experience from '../models/experienceModel';
+import Experience from '../../models/experienceModel';
 
 // Fonction pour se connecter à MongoDB
 async function connectToDatabase() {
