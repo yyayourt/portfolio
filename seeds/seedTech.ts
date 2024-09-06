@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import { TechDetails } from '../../models/TechDetails';
+import { TechDetails } from '../models/TechDetails';
 import dotenv from 'dotenv';
 
 dotenv.config({ path: 'C:/Users/yanis/Desktop/portfolio/backend/.env' });
