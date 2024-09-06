@@ -10,7 +10,6 @@ const inter = Inter({ subsets: ['latin'] });
 const title = 'Yanis Nasri | Web Developer From Nimes, France.';
 const description =
   'Un développeur spécialisé dans le développement web (React.js et Node.js), originaire de Nîmes, France.';
-const url = 'https://yanisnasri.dev';
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.PORT || 'http://localhost:3000'),
