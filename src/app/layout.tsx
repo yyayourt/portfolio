@@ -13,7 +13,7 @@ const description =
 const url = 'https://yanisnasri.dev';
 
 export const metadata: Metadata = {
-  metadataBase: new URL(url),
+  metadataBase: new URL(process.env.PORT || 'http://localhost:3000'),
   title,
   description,
   keywords: [
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     type: 'website',
-    url,
+    url: process.env.PORT || 'http://localhost:3000',
     title,
     description,
     siteName: title,
