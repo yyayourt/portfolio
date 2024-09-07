@@ -1,6 +1,6 @@
 import mongoose, { Schema, Document } from 'mongoose';
 
-interface ISchool extends Document {
+export interface ISchool extends Document {
   formationName: string;
   endDate?: Date;
   currentlyWorkHere?: boolean;
@@ -14,6 +14,7 @@ const schoolSchema: Schema = new Schema({
   summary: { type: String, required: true },
 });
 
-const School = mongoose.model<ISchool>('School', schoolSchema);
+// Vérifiez si le modèle existe déjà pour éviter les erreurs de redéfinition
+const School = mongoose.models.School || mongoose.model<ISchool>('School', schoolSchema);
 
 export default School;

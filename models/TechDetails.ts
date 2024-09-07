@@ -14,4 +14,7 @@ const TechDetailsSchema: Schema = new Schema({
   url: { type: String, required: true },
 });
 
-export const TechDetails = mongoose.model<ITechDetails>('TechDetails', TechDetailsSchema);
+// Assurez-vous de vérifier s'il existe déjà pour éviter l'erreur de redéfinition
+const TechDetails = mongoose.models.TechDetails || mongoose.model<ITechDetails>('TechDetails', TechDetailsSchema);
+
+export default TechDetails;

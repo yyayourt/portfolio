@@ -1,7 +1,7 @@
 // pages/api/technologies.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 import mongoose from 'mongoose';
-import { TechDetails } from '../../models/TechDetails';
+import TechDetails from '../../models/TechDetails';
 
 // Fonction pour se connecter à MongoDB
 async function connectToDatabase() {

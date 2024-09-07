@@ -22,6 +22,7 @@ const experienceSchema = new Schema<IExperience>({
   summary: { type: [String], required: true },
 });
 
-const Experience = mongoose.model<IExperience>('Experience', experienceSchema);
+// Vérifiez si le modèle existe déjà pour éviter les erreurs de redéfinition
+const Experience = mongoose.models.Experience || mongoose.model<IExperience>('Experience', experienceSchema);
 
 export default Experience;
