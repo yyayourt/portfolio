@@ -11,8 +11,10 @@ const title = 'Yanis Nasri | Web Developer From Nimes, France.';
 const description =
   'Un développeur spécialisé dans le développement web (React.js et Node.js), originaire de Nîmes, France.';
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.PORT || 'http://localhost:3000'),
+  metadataBase: new URL(siteUrl),
   title,
   description,
   keywords: [
@@ -27,7 +29,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     type: 'website',
-    url: process.env.PORT || 'http://localhost:3000',
+    url: siteUrl, // URL correcte ici
     title,
     description,
     siteName: title,
@@ -56,7 +58,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body className={`${inter.className} bg-gray text-gray-600 antialiased`}>
-        <Providers>  {/* Utilisation du composant Providers */}
+        <Providers>
           <Header />
           <main className="flex min-h-screen w-full flex-col">{children}</main>
           <Footer />
@@ -65,5 +67,4 @@ export default function RootLayout({
     </html>
   );
 }
-
 
