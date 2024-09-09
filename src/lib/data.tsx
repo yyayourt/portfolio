@@ -55,7 +55,11 @@ export async function fetchExperiences() {
   if (!response.ok) {
     throw new Error('Failed to fetch experiences');
   }
-  return await response.json();
+  const dataEx = await response.json();
+  return dataEx.map((experience: any) => ({
+    ...experience,
+    startDate: experience.startDate ? new Date(experience.startDate) : undefined,
+  }));
 }
 
 // Appel pour récupérer les projets
