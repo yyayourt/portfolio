@@ -37,7 +37,7 @@ const SkillsSection = () => {
           <Tag label="Skills" />
         </div>
         <Typography variant="subtitle" className="max-w-xl text-center">
-          Les compétences, outils et technologies que je maîtrise parfaitement :
+          Les compétences, outils et technologies que je maîtrise :
         </Typography>
       </div>
 
