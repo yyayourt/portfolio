@@ -26,7 +26,7 @@ const projects = [
     name: 'Encyclochain',
     description:
       'A platform for accessing real-time open banking and energy data to help you grow your business, backed with scalable back-end infrastructure.',
-    url: '',
+    url: 'Encyclochain.com',
     previewImage: '/images/projectLitoshi.png',
     technologies: [
       'React',
