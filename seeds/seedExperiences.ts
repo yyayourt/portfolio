@@ -1,4 +1,3 @@
-// backend/src/seedExperiences.ts
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import Experience from '../models/experienceModel';

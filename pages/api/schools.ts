@@ -1,4 +1,3 @@
-// pages/api/schools.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 import mongoose from 'mongoose';
 import School from '../../models/schoolModel';

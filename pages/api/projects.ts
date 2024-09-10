@@ -1,4 +1,3 @@
-// pages/api/projects.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 import mongoose from 'mongoose';
 import Project from '../../models/projectModel';

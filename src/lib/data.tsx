@@ -38,7 +38,6 @@ export const SOCIAL_LINKS = [
   },
 ];
 
-// Fichier: src/lib/data.tsx
 
 // Appel pour récupérer les technologies
 export async function fetchTechnologies() {

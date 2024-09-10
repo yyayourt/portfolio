@@ -1,4 +1,3 @@
-// pages/api/experiences.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 import mongoose from 'mongoose';
 import Experience from '../../models/experienceModel';

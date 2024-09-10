@@ -1,4 +1,3 @@
-// pages/api/technologies.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 import mongoose from 'mongoose';
 import TechDetails from '../../models/TechDetails';

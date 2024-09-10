@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import './globals.css';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
-import { Providers } from '@/lib/providers'; // Importer le composant Providers
+import { Providers } from '@/lib/providers';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     type: 'website',
-    url: siteUrl, // URL correcte ici
+    url: siteUrl,
     title,
     description,
     siteName: title,

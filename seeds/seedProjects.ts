@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
-import Project from '../models/projectModel'; // Assurez-vous d'utiliser le bon chemin d'import
+import Project from '../models/projectModel';
 
 dotenv.config();
 
