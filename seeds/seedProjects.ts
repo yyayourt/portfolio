@@ -12,7 +12,7 @@ const projects = [
     description:
       "Un site web dédié à l'analyse de marché des tokens BRC-20, offrant également la possibilité de réaliser des transactions en toute simplicité.",
     url: '',
-    previewImage: '/images/encyclochainProject.png',
+    previewImage: '/images/projectLitoshi.png',
     technologies: [
       'React',
       'Vite.js',
@@ -27,7 +27,7 @@ const projects = [
     description:
       'A platform for accessing real-time open banking and energy data to help you grow your business, backed with scalable back-end infrastructure.',
     url: 'Encyclochain.com',
-    previewImage: '/images/projectLitoshi.png',
+    previewImage: '/images/encyclochainProject.png',
     technologies: [
       'React',
       'Typescript',
