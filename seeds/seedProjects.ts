@@ -25,17 +25,15 @@ const projects = [
   {
     name: 'Encyclochain',
     description:
-      'A platform for accessing real-time open banking and energy data to help you grow your business, backed with scalable back-end infrastructure.',
+      "Encyclochain est une encyclopédie en ligne dédiée à la blockchain, offrant un accès à une vaste collection de ressources et d'informations actualisées sur les technologies décentralisées.",
     url: 'Encyclochain.com',
     previewImage: '/images/encyclochainProject.png',
     technologies: [
-      'React',
       'Typescript',
       'Tailwindcss',
       'Material UI',
-      'React Query',
       'Express.js',
-      'PostgreSQL',
+      'Next.js',
       'MongoDB',
     ],
   },
